@@ -10,28 +10,25 @@ features, comparing Logistic Regression, Decision Tree, Random Forest and XGBoos
 `data/processed/` holds the ready-to-use split: **1,690 training rows and 423 test rows**
 (2,113 total, stratified so class proportions match in both files, no duplicate rows, no missing values).
 
-The raw file and the preprocessing that produced these CSVs are **not part of this repository**
-(`data/raw/` is empty). The data appears to be the UCI Cardiotocography dataset (2,126 records,
-which would be 2,113 after removing 13 duplicates). Please add the preprocessing step (a
-`01_Data_Preparation` notebook or a script in `src/`) so the split can be rebuilt.
+The raw file and the preprocessing that produced these CSVs are not part of this repository
+(`data/raw/` is empty).
 
+**Source:** Cardiotocography dataset (UCI Machine Learning Repository), <https://archive.ics.uci.edu/dataset/193/cardiotocography>.
 ### Class labels
 
 The target `Fetal_Health` holds the integers 0, 1, 2, and the files do not record what they mean.
 The class sizes (1,646 / 175 / 292) are consistent with the UCI classes
-Normal (1,655), Pathological (176) and Suspect (295) after removing 13 duplicates, which would be
-produced by an alphabetical label encoding:
-
+The class sizes (1,646 / 175 / 292) match the UCI classes Normal (1,655), Pathological (176)
+and Suspect (295) after removing 13 duplicates. The labels were produced by an alphabetical
+label encoding:
 | id | likely meaning | rows (train + test) |
-|---|---|---|
+| id | meaning | rows (train + test) |
 | 0 | Normal | 1,646 |
 | 1 | Pathological | 175 |
 | 2 | Suspect | 292 |
 
 **This mapping is inferred, not confirmed** - check it against your original preprocessing code and
-correct this table if it is wrong. Note that the ids are *not* ordered by severity. Plots and
-tables use the raw ids for that reason.
-
+The ids are *not* ordered by severity. Plots and tables use the raw ids for that reason.
 ## Project structure
 
 ```
