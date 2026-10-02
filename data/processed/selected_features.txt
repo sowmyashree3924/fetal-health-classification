@@ -1,0 +1,10 @@
+ASTV
+MSTV
+ALTV
+Mean
+Mode
+Median
+DP
+AC
+MLTV
+LB

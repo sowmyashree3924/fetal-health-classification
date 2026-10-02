@@ -1,0 +1,74 @@
+{
+  "target": "Fetal_Health",
+  "random_seed": 42,
+  "model_family": "XGBoost",
+  "best_params": {
+    "learning_rate": 0.1,
+    "max_depth": 3,
+    "min_child_weight": 1,
+    "n_estimators": 200
+  },
+  "tuned_model": {
+    "file": "tuned_model.pkl",
+    "features": [
+      "LB",
+      "AC",
+      "FM",
+      "UC",
+      "DL",
+      "DS",
+      "DP",
+      "ASTV",
+      "MSTV",
+      "ALTV",
+      "MLTV",
+      "Width",
+      "Min",
+      "Max",
+      "Nmax",
+      "Nzeros",
+      "Mode",
+      "Mean",
+      "Median",
+      "Variance",
+      "Tendency"
+    ],
+    "test_metrics": {
+      "Accuracy": 0.9716,
+      "Precision": 0.9716,
+      "Recall": 0.9716,
+      "F1-score": 0.9709,
+      "Macro F1": 0.9511
+    }
+  },
+  "reduced_feature_model": {
+    "file": "reduced_feature_model.pkl",
+    "features": [
+      "ASTV",
+      "MSTV",
+      "ALTV",
+      "Mean",
+      "Mode",
+      "Median",
+      "DP",
+      "AC",
+      "MLTV",
+      "LB"
+    ],
+    "test_metrics": {
+      "Accuracy": 0.9669,
+      "Precision": 0.9667,
+      "Recall": 0.9669,
+      "F1-score": 0.966,
+      "Macro F1": 0.9379
+    }
+  },
+  "class_labels": "Integer ids 0/1/2 - meaning not stored in the data; see README 'Class labels'.",
+  "library_versions": {
+    "python": "3.12.3",
+    "scikit-learn": "1.9.1",
+    "xgboost": "3.2.0",
+    "pandas": "3.0.6",
+    "numpy": "2.4.6"
+  }
+}

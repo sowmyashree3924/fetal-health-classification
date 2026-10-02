@@ -1,0 +1,32 @@
+# Python virtual environment
+.venv/
+venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Python packaging
+*.egg-info/
+
+# Raw data stays local (keep the folder itself)
+data/raw/*
+!data/raw/.gitkeep
+
+# Temporary files
+*.tmp
+*.log
+
+# NOTE: trained models in models/ are small and are versioned on purpose.
+# If you prefer to regenerate them, add: *.pkl
