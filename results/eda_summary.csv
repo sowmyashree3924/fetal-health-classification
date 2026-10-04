@@ -1,0 +1,9 @@
+Metric,Value
+Original samples,2126
+Duplicate rows removed,13
+Final samples,2113
+Number of features,21
+Missing values,0
+Normal cases,1646
+Suspect cases,292
+Pathological cases,175
